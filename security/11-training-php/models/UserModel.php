@@ -38,10 +38,15 @@ class UserModel extends BaseModel {
      * @return mixed
      */
     public function deleteUserById($id) {
-        $sql = 'DELETE FROM users WHERE id = '.$id;
-        return $this->delete($sql);
-
+        // Sử dụng prepare để tạo truy vấn xóa
+        $stmt = self::$_connection->prepare("DELETE FROM users WHERE id = ?");
+        $stmt->bind_param("i", $id); // Ràng buộc tham số với kiểu số nguyên
+        $result = $stmt->execute();
+        $stmt->close(); // Đóng statement sau khi thực hiện
+        return $result;
     }
+    
+    
 
     /**
      * Update user
