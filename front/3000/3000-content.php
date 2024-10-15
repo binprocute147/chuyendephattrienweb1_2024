@@ -7,7 +7,6 @@ $url_path = $url_host . $matches[1][0];
 $url_path = str_replace('\\', '/', $url_path);
 ?>
 
-
 <div class="type-3000">
     <div class="top-bar">
         <div class="container d-flex justify-content-between align-items-center">
@@ -60,7 +59,7 @@ $url_path = str_replace('\\', '/', $url_path);
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">Pages</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="/front/3000/3016.php">FAQS</a></li>
                             <li><a class="dropdown-item" href="#">Blog Archive</a></li>
                             <li><a class="dropdown-item" href="#">Single post</a></li>
                             <li><a class="dropdown-item" href="#">Error 404</a></li>
